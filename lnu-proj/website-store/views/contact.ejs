@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Store</title>
+    <style>
+        .html {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header {
+        width: 100%;
+        height: 75px;
+        box-shadow: 0px 2px 5px rgb(160, 160, 160);
+        background-color: #fff;
+        }
+
+        .logo {
+            margin: 0;
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-image: url(/logo-and-icons/logo-website.png);
+            background-size: cover;
+            background-position:center;
+        }
+
+        .logo-position {
+            margin: 7.5px 0 7.5px 50px;
+        }
+
+        .main-logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        .body {
+            margin: 0;
+        }
+
+        .page {
+            min-height:100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #F0F0F0;
+            width: 500px;
+            height: 450px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px grey;
+            margin-bottom: 100px;
+        }
+
+        .border-position {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .border {
+            width: 400px;
+            border: solid gray 0.5px;
+            border-radius: 5px;
+        }
+
+        .regIcon {
+            position: absolute;
+            background-image: url(/logo-and-icons/user.png);
+            height: 20px;
+            width: 20px;
+            background-size: cover;
+            background-position:center;
+        }
+
+        .contactIcon {
+            position: absolute;
+            background-image: url(/logo-and-icons/phone-call.png);
+            height: 20px;
+            width: 20px;
+            background-size: cover;
+            background-position:center;
+        }
+
+        .regIconPosition {
+            margin: 27.5px 50px 27.5px 1400px;
+        }
+        
+        .contactIconPosition {
+            margin: 27.5px 50px 27.5px 1450px;
+        }
+
+        .contact_phoneNumber {
+            position: absolute;
+            background-image: url(/logo-and-icons/customer-service.png);
+            height: 40px;
+            width: 40px;
+            background-size: cover;
+            background-position:center;
+            margin-top: 55px;
+        }
+
+        .contact_gmail {
+            position: absolute;
+            background-image: url(/logo-and-icons/gmail-logo.png);
+            height: 40px;
+            width: 40px;
+            background-size: cover;
+            background-position:center;
+            margin-top: 270px;
+        }
+
+        .phoneNumber-1 {
+            position: absolute;
+            margin: 110px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        
+        .phoneNumber-2 {
+            position: absolute;
+            margin: 140px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .gmail-text {
+            position: absolute;
+            margin: 325px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .container-el {
+            display: flex;
+            justify-content: center;
+        }
+        </style>
+</head>
+<body class="body">
+    <div class="page">
+    <header class="header">
+        <a href="/home" class="main-logo">
+            <div class="logo logo-position"></div>
+        </a>
+        <a href="/register" class="link regIconLink">
+             <div class="regIcon regIconPosition "></div>
+        </a>
+ 
+        <a href="/redirectToContacts" class="link regIconLink">
+         <div class="contactIcon contactIconPosition"></div>
+        </a>
+     </header>
+        <div class="container">
+            <div class="container-el">
+                <div class="contact_phoneNumber"></div>
+                <label class="phoneNumber-1">(099)190-80-31</label>
+                <label class="phoneNumber-2">(095)755-45-20</label>
+                <div class="contact_gmail"></div>
+                <label class="gmail-text">bikestore@gmail.com</label>
+            </div>
+            <div class="border-position">
+                <div class="border">
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

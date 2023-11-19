@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bike Store</title>
+
+    <style>
+        .html {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .body {
+        margin: 0;
+        }
+
+        .header {
+        width: 100%;
+        height: 75px;
+        box-shadow: 0px 2px 5px rgb(160, 160, 160);
+        background-color: #fff;
+        }
+
+        .logo {
+            margin: 0;
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-image: url(/logo-and-icons/logo-website.png);
+            background-size: cover;
+            background-position:center;
+        }
+
+        .logo-position {
+            margin: 7.5px 0 7.5px 50px;
+        }
+
+        .main-logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        .regIcon {
+            position: absolute;
+            background-image: url(/logo-and-icons/user.png);
+            height: 20px;
+            width: 20px;
+            background-size: cover;
+            background-position:center;
+        }
+
+        .contactIcon {
+            position: absolute;
+            background-image: url(/logo-and-icons/phone-call.png);
+            height: 20px;
+            width: 20px;
+            background-size: cover;
+            background-position:center;
+        }
+
+        .regIconPosition {
+            margin: 27.5px 50px 27.5px 1400px;
+        }
+        
+        .contactIconPosition {
+            margin: 27.5px 50px 27.5px 1450px;
+        }
+
+        .goods_card-1 {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px;
+            padding: 15px;
+            width: 30%;
+            background-color: #dfd7d7;
+            border-radius: 10px;
+        }
+
+        .roadBikePhoto {
+            height: 90%;
+            width: 90%;
+            box-shadow: 0px 2px 5px rgb(160, 160, 160);
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .title {
+            margin: 10px 0 0;
+        }
+        
+        .priceRoadBike {
+            margin: 10px 0 10px;
+        }
+
+        .buyRoadBike {
+            height: 30px;
+            width: 70px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body class="body">
+    <header class="header">
+        <a href="/home" class="main-logo">
+            <div class="logo logo-position"></div>
+        </a>
+       
+       <a href="/register" class="link regIconLink">
+            <div class="regIcon regIconPosition "></div>
+       </a>
+
+       <a href="/redirectToContacts" class="link regIconLink">
+        <div class="contactIcon contactIconPosition"></div>
+       </a>
+    </header>
+
+    <div class="goods_card-1">
+        <img src="https://veliki.com.ua/files/2019/12_26/13_20/u_files_store_41_11900.jpg" alt="Road Bike" class="roadBikePhoto">
+        <h2 class="title">Road Bike "Giant"</h2>
+        <h3 class="priceRoadBike">500$</h3>
+        <button class="buyRoadBike">Buy</button>
+    </div>
+</body>
+</html>
