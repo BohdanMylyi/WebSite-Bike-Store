@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const notifier = require('node-notifier');
-const goods = require('./goods');
 const app = express()
 const registrationMiddleware = require('/Users/Bohdan/projects/lnu-proj/website-store/modules/middlewares/registrationMiddleware');
 const loginMiddleware = require('/Users/Bohdan/projects/lnu-proj/website-store/modules/middlewares/loginMiddleware');
@@ -12,6 +11,7 @@ const loginController = require('/Users/Bohdan/projects/lnu-proj/website-store/m
 const registerController = require('/Users/Bohdan/projects/lnu-proj/website-store/modules/controllers/registerController');
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname));
 
 app.set('view engine', 'ejs');
 
@@ -53,3 +53,27 @@ app.get('/redirectToContacts', (req, res) => {
 })
 
 app.listen(3000)
+
+app.post('/addToCart', (req, res) => {
+  const { productName, price } = req.body;
+
+  fetch('http://localhost:3001/addToCart', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ productName, price }),
+  })
+  .then(response => response.json())
+  .then(data => res.json(data))
+  .catch(error => res.status(500).json({ error: 'Internal Server Error' }));
+});
+
+app.post('/clearCart', (req, res) => {
+  fetch('http://localhost:3001/clearCart', {
+      method: 'POST',
+  })
+  .then(response => response.json())
+  .then(data => res.json(data))
+  .catch(error => res.status(500).json({ error: 'Internal Server Error' }));
+});
