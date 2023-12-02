@@ -17,6 +17,7 @@ function addToCart(productName, price) {
 
     const currentTotal = parseFloat(cartTotal.innerText);
     cartTotal.innerText = (currentTotal + price).toFixed(2);
+    showNotification(`Product "${productName}" added in basket!`);
 }
 
 function updateCartCount() {

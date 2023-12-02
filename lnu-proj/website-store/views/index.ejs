@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="html">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +16,14 @@
         }
 
         .body {
-        margin: 0;
+            margin: 0;
         }
 
         .header {
-        width: 100%;
-        height: 75px;
-        box-shadow: 0px 2px 5px rgb(160, 160, 160);
-        background-color: #fff;
+            width: 100%;
+            height: 75px;
+            box-shadow: 0px 2px 5px rgb(160, 160, 160);
+            background-color: #fff;
         }
 
         .logo {
@@ -32,7 +33,7 @@
             width: 60px;
             background-image: url(/logo-and-icons/logo-website.png);
             background-size: cover;
-            background-position:center;
+            background-position: center;
         }
 
         .logo-position {
@@ -50,7 +51,7 @@
             height: 20px;
             width: 20px;
             background-size: cover;
-            background-position:center;
+            background-position: center;
         }
 
         .contactIcon {
@@ -59,13 +60,13 @@
             height: 20px;
             width: 20px;
             background-size: cover;
-            background-position:center;
+            background-position: center;
         }
 
         .regIconPosition {
             margin: 27.5px 50px 27.5px 1400px;
         }
-        
+
         .contactIconPosition {
             margin: 27.5px 50px 27.5px 1450px;
         }
@@ -113,6 +114,14 @@
         }
 
         .roadBikePhoto {
+            height: 60%;
+            width: 80%;
+            box-shadow: 0px 2px 5px rgb(160, 160, 160);
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .roadBikePhoto-3 {
             height: 80%;
             width: 80%;
             box-shadow: 0px 2px 5px rgb(160, 160, 160);
@@ -123,7 +132,7 @@
         .title {
             margin: 10px 0 0;
         }
-        
+
         .priceRoadBike {
             margin: 10px 0 10px;
         }
@@ -211,46 +220,107 @@
             margin: 24px 50px 27.5px 1360px;
             border-radius: 50%;
         }
+
+        .highlight {
+            background-color: #ffffff;
+            border: solid 2px;
+        }
+
+        .confirmation-popup {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .confirmation-popup button {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .notification {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #2f2f2f;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            z-index: 1000;
+            border: solid 2px;
+            border-radius: 30px;
+        }
+
+        .inputSearch {
+            line-height: 75px;
+            margin-left: 920px;
+        }
+
+        .searchButton {
+            height: 25px;
+            border-radius: 20px;
+        }
+
+        .input {
+            height: 20px;
+            border-radius: 20px;
+        }
     </style>
 
 </head>
+
 <body class="body">
     <header class="header">
         <a href="/home" class="main-logo">
             <div class="logo logo-position"></div>
         </a>
-       
-       <a href="/register" class="link regIconLink">
+
+        <a href="/register" class="link regIconLink">
             <div class="regIcon regIconPosition "></div>
-       </a>
+        </a>
 
-       <a href="/redirectToContacts" class="link regIconLink">
-        <div class="contactIcon contactIconPosition"></div>
-       </a>
+        <a href="/redirectToContacts" class="link regIconLink">
+            <div class="contactIcon contactIconPosition"></div>
+        </a>
 
-       <a href="#" onclick="toggleCart()">
-        <div class="cartIcon"></div>
-        <span id="cartCount" class="cart-count">0</span>
-    </a>
+        <a href="#" onclick="toggleCart()">
+            <div class="cartIcon"></div>
+            <span id="cartCount" class="cart-count">0</span>
+        </a>
+
+        <div class="inputSearch">
+            <label for="searchInput">Search Product:</label>
+            <input type="text" id="searchInput" class="input">
+            <button id="searchButton" class="searchButton" onclick="searchProduct()">Search</button>
+        </div>
     </header>
 
     <div class="allGoods">
-        <div class="goods_card-1" >
-            <img src="https://veliki.com.ua/files/2019/12_26/13_20/u_files_store_41_11900.jpg" alt="Road Bike" class="roadBikePhoto">
+        <div class="goods_card-1">
+            <img src="https://veliki.com.ua/files/2019/12_26/13_20/u_files_store_41_11900.jpg" alt="Road Bike"
+                class="roadBikePhoto">
             <h2 class="title">Road Bike "Giant"</h2>
             <h3 class="priceRoadBike">500$</h3>
             <button class="buyRoadBike" onclick="addToCart('Road Bike Giant', 500)">Buy</button>
         </div>
-    
-        <div class="goods_card-2" >
-            <img src="https://veloplaneta.ua/upload/iblock/b73/18521aa4-5451-11ec-9823-e835c1d464ac_acbd3304-6256-11ec-9823-e835c1d464ac.jpeg" alt="Road Bike" class="roadBikePhoto">
+
+        <div class="goods_card-2">
+            <img src="https://veloplaneta.ua/upload/iblock/b73/18521aa4-5451-11ec-9823-e835c1d464ac_acbd3304-6256-11ec-9823-e835c1d464ac.jpeg"
+                alt="Road Bike" class="roadBikePhoto">
             <h2 class="title">Road Bike "Bianchi"</h2>
             <h3 class="priceRoadBike">730$</h3>
             <button class="buyRoadBike" onclick="addToCart('Road Bike Bianchi', 730)">Buy</button>
         </div>
 
-        <div class="goods_card-3" >
-            <img src="https://velozavr.com.ua/image/data/velosiped/gornie-mtb/8/B-D0-B9-20-D0-BC-202017-1280-1600x1200.jpg" alt="Road Bike" class="roadBikePhoto">
+        <div class="goods_card-3">
+            <img src="https://velozavr.com.ua/image/data/velosiped/gornie-mtb/8/B-D0-B9-20-D0-BC-202017-1280-1600x1200.jpg"
+                alt="Road Bike" class="roadBikePhoto roadBikePhoto-3">
             <h2 class="title">Road Bike "Leon"</h2>
             <h3 class="priceRoadBike">470$</h3>
             <button class="buyRoadBike" onclick="addToCart('Road Bike Leon', 470)">Buy</button>
@@ -268,6 +338,19 @@
         <div class="clear-cart" onclick="clearCart()">Clear</div>
     </div>
 
+    <div class="confirmation-popup" id="buyConfirmationPopup">
+        <p id="confirmationMessage"></p>
+        <button onclick="confirmBuy()">Buy</button>
+        <button onclick="cancelBuy()">Cancel</button>
+    </div>
+
+
+    <div id="notification" class="notification"></div>
+
+
+    <script src="/modules/confirmationBuy.js"></script>
+    <script src="/modules/inputFunctions.js"></script>
     <script src="/modules/goodsBasket.js"></script>
 </body>
+
 </html>
