@@ -1,7 +1,7 @@
 const express = require("express");
+const app = express()
 const bodyParser = require('body-parser');
 const notifier = require('node-notifier');
-const app = express()
 const registrationMiddleware = require('/Users/Bohdan/projects/lnu-proj/website-store/modules/middlewares/registrationMiddleware');
 const loginMiddleware = require('/Users/Bohdan/projects/lnu-proj/website-store/modules/middlewares/loginMiddleware');
 

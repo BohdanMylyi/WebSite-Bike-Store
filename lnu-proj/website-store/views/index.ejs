@@ -121,6 +121,14 @@
             border-radius: 10px;
         }
 
+        .roadBikePhoto-2 {
+            height: 70%;
+            width: 80%;
+            box-shadow: 0px 2px 5px rgb(160, 160, 160);
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
         .roadBikePhoto-3 {
             height: 80%;
             width: 80%;
@@ -271,6 +279,11 @@
             height: 20px;
             border-radius: 20px;
         }
+
+        .center-confirm-popup {
+            display: flex;
+            justify-content: center;
+        }
     </style>
 
 </head>
@@ -311,8 +324,8 @@
         </div>
 
         <div class="goods_card-2">
-            <img src="https://veloplaneta.ua/upload/iblock/b73/18521aa4-5451-11ec-9823-e835c1d464ac_acbd3304-6256-11ec-9823-e835c1d464ac.jpeg"
-                alt="Road Bike" class="roadBikePhoto">
+            <img src="https://www.theproscloset.com/cdn/shop/products/BRD20999_PH1_01.jpg?v=1616814489" alt="Road Bike"
+                class="roadBikePhoto roadBikePhoto-2">
             <h2 class="title">Road Bike "Bianchi"</h2>
             <h3 class="priceRoadBike">730$</h3>
             <button class="buyRoadBike" onclick="addToCart('Road Bike Bianchi', 730)">Buy</button>
@@ -338,10 +351,12 @@
         <div class="clear-cart" onclick="clearCart()">Clear</div>
     </div>
 
-    <div class="confirmation-popup" id="buyConfirmationPopup">
-        <p id="confirmationMessage"></p>
-        <button onclick="confirmBuy()">Buy</button>
-        <button onclick="cancelBuy()">Cancel</button>
+    <div class="center-confirm-popup">
+        <div class="confirmation-popup" id="buyConfirmationPopup">
+            <p id="confirmationMessage"></p>
+            <button onclick="confirmBuy()">Buy</button>
+            <button onclick="cancelBuy()">Cancel</button>
+        </div>
     </div>
 
 

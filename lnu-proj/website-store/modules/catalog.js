@@ -1,6 +1,6 @@
 const allGoodsContainer = document.getElementById('allGoods');
 let currentCategory = 'all';
-const catalogContent = document.getElementById('catalogContent'); // Додайте цей рядок
+const catalogContent = document.getElementById('catalogContent'); 
 
 function filterGoods(category) {
     currentCategory = category;

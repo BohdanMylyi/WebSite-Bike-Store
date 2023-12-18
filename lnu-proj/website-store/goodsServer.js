@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require('body-parser');
 const goodsBasket = require('/Users/Bohdan/projects/lnu-proj/website-store/modules/goodsBasket');
 
 const app = express();
